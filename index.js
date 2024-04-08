@@ -22,6 +22,6 @@ const customer = require("./src/route/customer.route");
 employee(app);
 customer(app);
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen( PORT, () => {
   console.log("Server is running on port"+ PORT);
 });
