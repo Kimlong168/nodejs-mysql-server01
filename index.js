@@ -9,6 +9,7 @@ app.use(
   })
 );
 
+const PORT = 3001;
 app.get("/", (req, res) => {
   res.send("Hello! b sl soy");
 });
@@ -21,6 +22,6 @@ const customer = require("./src/route/customer.route");
 employee(app);
 customer(app);
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.listen(process.env.PORT || PORT, () => {
+  console.log("Server is running on port"+ PORT);
 });
